@@ -8,7 +8,7 @@ username = os.getenv("CONAN_USERNAME", "shawinnes")
 
 class HelloTestConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
-    requires = "Hello/0.1@%s/%s" % (username, channel)
+    requires = "ConanLib/0.1@%s/%s" % (username, channel)
     generators = "cmake"
 
     def build(self):

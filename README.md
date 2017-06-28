@@ -3,7 +3,7 @@
 Create new package with test package folder and gitignore file
 
 ```
-conan new Hello/0.1@demo/testing -t -gi
+conan new ConanLib/0.1@demo/testing -t -gi
 ```
 
 ```
