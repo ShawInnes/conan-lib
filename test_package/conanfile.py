@@ -6,7 +6,7 @@ channel = os.getenv("CONAN_CHANNEL", "testing")
 username = os.getenv("CONAN_USERNAME", "shawinnes")
 
 
-class HelloTestConan(ConanFile):
+class ConanLibTestConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     requires = "ConanLib/0.1@%s/%s" % (username, channel)
     generators = "cmake"
