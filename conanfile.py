@@ -4,7 +4,7 @@ import os
 
 class ConanLibConan(ConanFile):
     name = "ConanLib"
-    version = "0.1"
+    version = "0.2"
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False]}
     default_options = "shared=False"
