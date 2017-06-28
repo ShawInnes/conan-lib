@@ -5,15 +5,13 @@ import os
 class HelloConan(ConanFile):
     name = "Hello"
     version = "0.1"
-    license = "<Put the package license here>"
-    url = "<Package recipe repository url here, for issues about the package>"
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False]}
     default_options = "shared=False"
     generators = "cmake"
 
     def source(self):
-        self.run("git clone https://github.com/memsharded/hello.git")
+        self.run("git clone https://github.com/shawinnes/conan-lib.git")
         self.run("cd hello && git checkout static_shared")
         # This small hack might be useful to guarantee proper /MT /MD linkage in MSVC
         # if the packaged project doesn't have variables to set it properly
